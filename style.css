@@ -40,16 +40,9 @@ ul {
   height: 50px;
 }
 
-/* HEADER
------------------ */
-#header {
-  /* border-bottom: 2px solid #000000; */
-}
-
 /* NAVIGATION
 ----------------- */
 #nav-outer-wrapper {
-  /* background: var(--secondary-color); */
   background: #fff;
   width: 100%;
   position: fixed;
@@ -62,7 +55,7 @@ ul {
   width: 80%;
   display: flex;
   justify-content: center;
-  padding: var(--padding-sm);
+  padding: var(--padding-xs);
   position: relative;
 }
 
@@ -77,12 +70,7 @@ ul {
   width: 30%;
 }
 
-.nav-external {
-  position: absolute;
-  right: 0;
-}
-
-#nav ul li a {
+#nav ul.nav-internal li a {
   text-decoration: none;
   font-size: 1.2rem;
   color: unset;
@@ -92,7 +80,7 @@ ul {
   overflow: hidden;
 }
 
-#nav ul li a:before {
+#nav ul.nav-internal li a:before {
   content: "";
   position: absolute;
   left: 0;
@@ -105,13 +93,30 @@ ul {
   transform: translateX(-100%);
 }
 
-#nav ul li a:hover {
+#nav ul.nav-internal li a:hover {
   text-decoration: underline;
   color: #fff;
 }
 
-#nav ul li a:hover:before {
+#nav ul.nav-internal li a:hover:before {
   transform: translateX(0);
+}
+
+.nav-external {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  width: 13%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-external li a {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
 }
 
 /* MAIN
@@ -154,7 +159,6 @@ ul {
   left: 0;
   bottom: 0;
   background: var(--primary-color);
-  /* height: 65px; */
   height: 4rem;
   width: 100%;
   z-index: -1;
@@ -166,7 +170,6 @@ ul {
 
 .skills ul {
   display: flex;
-  /* justify-content: space-around; */
   width: 70%;
   flex-wrap: wrap;
   gap: 7px;
@@ -174,13 +177,11 @@ ul {
 
 .skills ul li {
   border: 1px solid #333;
-  /* padding: var(--padding-xs); */
   padding: calc(.3rem / 2) .3rem;
   border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: auto; */
   text-transform: uppercase;
   font-size: .8rem;
   white-space: nowrap;
@@ -217,6 +218,5 @@ ul {
   width: 100%;
   text-align: center;
   padding: var(--padding-xs);
-  /* background: var(--secondary-color); */
   border-top: 1px solid rgba(0,0,0,0.3)
 }
