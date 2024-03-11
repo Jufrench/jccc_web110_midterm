@@ -36,7 +36,7 @@ ul {
 }
 
 .section-base h1 {
-  margin-bottom: var(--margin-xs);
+  /* margin-bottom: var(--margin-xs); */
 }
 
 .divider-color {
@@ -237,9 +237,22 @@ hr {
 ----------------- */
 .projects-intro {
   margin-top: var(--margin-md);
-  margin-bottom: var(--margin-md);
   padding-top: var(--padding-xl);
   padding-bottom: 0;
+  height: 300px;
+  background-image: url(/me_cartagena.jpeg);
+  background-position: center 35%;
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.projects-intro h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  padding-left: var(--padding-xs);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 40%;
 }
 
 .project-list {
@@ -288,6 +301,26 @@ hr {
 
 .project-card-body a:hover {
   text-decoration: underline;
+}
+
+.course-intro {
+  margin-top: var(--margin-md);
+  padding-top: var(--padding-xl);
+  padding-bottom: 0;
+  height: 300px;
+  background-image: url(/IMG_3548.png);
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.course-intro h1 {
+  font-size: 2rem;;
+  color: #fff;
+  padding-left: var(--padding-xs);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 40%;
 }
 
 /* FOOTER
