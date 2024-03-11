@@ -1,12 +1,33 @@
 :root {
+  --padding-xl: 5rem;
+  --padding-lg: 3rem;
   --padding-md: 2rem;
   --padding-sm: 1rem;
+  --padding-xs: .5rem;
+  --padding-xxs: .25rem;
+  --margin-md: 2rem;
+  --margin-sm: 1rem;
+  --margin-xs: .5rem;
+  --primary-color: dodgerblue;
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.section-base {
+  padding: var(--padding-md);
+}
+
+.divider {
+  background-color: var(--primary-color);
+  height: 50px;
 }
 
 /* NAVIGATION
@@ -52,6 +73,69 @@
   margin: 6rem auto 0;
   box-shadow: rgba(0, 0, 51, 0.06) 0px 0px 0px 1px, rgba(0, 0, 0, 0.15) 0px 12px 60px 0px, rgba(0, 9, 50, 0.12) 0px 12px 32px -16px;
   border-radius: 10px;
-  /* padding: 2rem; */
-  padding: var(--padding-md);
+}
+
+#main hr {
+  height: 1px;
+  opacity: 0.2;
+}
+
+.intro {
+  margin-top: var(--margin-md);
+  padding-top: var(--padding-xl);
+  padding-bottom: 0;
+}
+
+.skills {
+  position: relative;
+}
+
+.skills:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: var(--primary-color);
+  /* height: 65px; */
+  height: 4rem;
+  width: 100%;
+  z-index: -1;
+}
+
+.skills h2 {
+  margin-bottom: var(--margin-sm);
+}
+
+.skills ul {
+  display: flex;
+  /* justify-content: space-around; */
+  width: 50%;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.skills ul li {
+  border: 1px solid #333;
+  padding: var(--padding-xxs);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  /* width: auto; */
+  text-transform: uppercase;
+  font-size: .8rem;
+  white-space: nowrap;
+}
+
+/* .skills ul li + li {
+  margin-left: 10px;
+} */
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  border: 1px solid tomato;
+  width: 100%;
+  text-align: center;
+  padding: var(--padding-xs);
 }
