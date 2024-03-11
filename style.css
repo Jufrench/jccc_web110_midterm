@@ -1,11 +1,54 @@
-#nav {
+:root {
+  --padding-md: 2rem;
+  --padding-sm: 1rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* NAVIGATION
+----------------- */
+#nav-outer {
   background: dodgerblue;
+}
+
+#nav {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  padding: var(--padding-sm);
+  position: fixed;
+}
+
+#nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-internal {
+  border: 1px solid tomato;
+}
+
+.nav-external {
+  border: 1px solid black;
+  position: absolute;
+  right: 0;
+}
+
+#nav ul li a {
+  text-decoration: none;
 }
 
 #main {
   width: 80%;
-  margin: 0 auto;
+  margin: 3rem auto 0;
   box-shadow: rgba(0, 0, 51, 0.06) 0px 0px 0px 1px, rgba(0, 0, 0, 0.15) 0px 12px 60px 0px, rgba(0, 9, 50, 0.12) 0px 12px 32px -16px;
   border-radius: 10px;
-  padding: 2rem;
+  /* padding: 2rem; */
+  padding: var(--padding-md);
 }
