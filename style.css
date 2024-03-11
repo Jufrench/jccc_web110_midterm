@@ -35,21 +35,12 @@ ul {
   padding: var(--padding-md);
 }
 
-.section-base h1 {
-  /* margin-bottom: var(--margin-xs); */
-}
-
 .divider-color {
   background-color: var(--primary-color);
   height: 2px;
   opacity: 1;
   border: none;
 }
-
-/* .divider {
-  background-color: var(--primary-color);
-  height: 50px;
-} */
 
 /* NAVIGATION
 ----------------- */
@@ -68,6 +59,25 @@ ul {
   justify-content: center;
   padding: var(--padding-xs);
   position: relative;
+}
+
+.site-history {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--primary-color)
+}
+
+.site-history:hover {
+  text-decoration: underline;
+}
+
+.site-history span {
+  margin-left: 5px;
 }
 
 #nav ul {
@@ -141,6 +151,7 @@ ul {
   margin: 6rem auto;
   box-shadow: rgba(0, 0, 51, 0.06) 0px 0px 0px 1px, rgba(0, 0, 0, 0.15) 0px 12px 60px 0px, rgba(0, 9, 50, 0.12) 0px 12px 32px -16px;
   border-radius: 10px;
+  background: #fff;
 }
 
 hr {
@@ -159,7 +170,6 @@ hr {
 }
 
 .intro .ai-me {
-  /* border: 1px solid black; */
   width: 50%;
   text-align: right;
 }
@@ -175,18 +185,6 @@ hr {
 .skills {
   position: relative;
 }
-
-/* .skills:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  background: var(--primary-color);
-  height: 4rem;
-  width: 100%;
-  z-index: -1;
-} */
 
 .skills h2 {
   margin-bottom: var(--margin-sm);
@@ -211,7 +209,7 @@ hr {
   white-space: nowrap;
 }
 
-/* COURSES
+/* CIS TECH COURSES
 ----------------- */
 .courses h2 {
   margin-bottom: var(--margin-sm);
@@ -265,7 +263,6 @@ hr {
   flex-basis: 31%;
   flex-grow: 0;
   flex-shrink: 2;
-  /* padding: var(--padding-md); */
   border: 1px solid rgba(0,0,0,0.3);
   border-radius: 10px;
   margin-bottom: var(--margin-md);
@@ -303,6 +300,8 @@ hr {
   text-decoration: underline;
 }
 
+/* WEB 110
+----------------- */
 .course-intro {
   margin-top: var(--margin-md);
   padding-top: var(--padding-xl);
@@ -323,6 +322,14 @@ hr {
   width: 40%;
 }
 
+.course-content h2 {
+  margin-bottom: var(--margin-sm);
+}
+
+.course-content ol {
+  margin-left: var(--margin-md);
+}
+
 /* FOOTER
 ----------------- */
 #footer {
@@ -330,4 +337,32 @@ hr {
   text-align: center;
   padding: var(--padding-xs);
   border-top: 1px solid rgba(0,0,0,0.3)
+}
+
+/* BALL
+----------------- */
+.ball {
+  width: 500px;
+  height: 500px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  position: fixed;
+  right: -10%;
+  bottom: -10%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.ball {
+  animation: spin 10s 100 linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg) translate(-10px) rotate(0deg);
+  }
+  
+  to {
+    transform: rotate(360deg) translate(-10px) rotate(-360deg);
+  }
 }
