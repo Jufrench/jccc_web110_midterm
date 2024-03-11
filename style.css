@@ -11,8 +11,11 @@
 
 /* NAVIGATION
 ----------------- */
-#nav-outer {
+#nav-outer-wrapper {
   background: dodgerblue;
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 
 #nav {
@@ -22,7 +25,7 @@
   justify-content: center;
   border: 1px solid black;
   padding: var(--padding-sm);
-  position: fixed;
+  position: relative;
 }
 
 #nav ul {
@@ -46,7 +49,7 @@
 
 #main {
   width: 80%;
-  margin: 3rem auto 0;
+  margin: 6rem auto 0;
   box-shadow: rgba(0, 0, 51, 0.06) 0px 0px 0px 1px, rgba(0, 0, 0, 0.15) 0px 12px 60px 0px, rgba(0, 9, 50, 0.12) 0px 12px 32px -16px;
   border-radius: 10px;
   /* padding: 2rem; */
