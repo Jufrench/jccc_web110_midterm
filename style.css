@@ -17,6 +17,10 @@
   padding: 0;
 }
 
+html {
+  position: relative;
+}
+
 ul {
   list-style-type: none;
 }
@@ -70,7 +74,7 @@ ul {
 
 #main {
   width: 80%;
-  margin: 6rem auto 0;
+  margin: 6rem auto;
   box-shadow: rgba(0, 0, 51, 0.06) 0px 0px 0px 1px, rgba(0, 0, 0, 0.15) 0px 12px 60px 0px, rgba(0, 9, 50, 0.12) 0px 12px 32px -16px;
   border-radius: 10px;
 }
@@ -82,8 +86,13 @@ ul {
 
 .intro {
   margin-top: var(--margin-md);
+  margin-bottom: var(--margin-md);
   padding-top: var(--padding-xl);
   padding-bottom: 0;
+}
+
+.intro h1 {
+  margin-bottom: var(--margin-xs);
 }
 
 .skills {
@@ -110,16 +119,18 @@ ul {
 .skills ul {
   display: flex;
   /* justify-content: space-around; */
-  width: 50%;
+  width: 70%;
   flex-wrap: wrap;
   gap: 7px;
 }
 
 .skills ul li {
   border: 1px solid #333;
-  padding: var(--padding-xxs);
+  /* padding: var(--padding-xs); */
+  padding: calc(.3rem / 2) .3rem;
   border-radius: 50px;
   display: flex;
+  justify-content: center;
   align-items: center;
   /* width: auto; */
   text-transform: uppercase;
@@ -127,9 +138,18 @@ ul {
   white-space: nowrap;
 }
 
-/* .skills ul li + li {
-  margin-left: 10px;
-} */
+.courses h2 {
+  margin-bottom: var(--margin-sm);
+  text-align: right;
+}
+
+.courses ul li input:checked {
+  accent-color: limegreen;
+}
+
+.courses ul li span {
+  margin-left: var(--margin-xs);
+}
 
 #footer {
   position: absolute;
